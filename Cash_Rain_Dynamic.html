@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cash Rain - টাকা আয়ের বট</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #007bff, #6610f2);
+      padding: 15px 0;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .profile {
+      margin-top: 25px;
+      background: #111;
+      display: inline-block;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #6610f2;
+    }
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #6610f2;
+    }
+    .balance {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      margin: 15px 0;
+      font-weight: 600;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 15px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 15px;
+      width: 120px;
+      box-shadow: 0 0 10px #007bff;
+    }
+    .card h3 {
+      color: #00bfff;
+      margin: 5px 0;
+    }
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 2px solid #007bff;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+  <script src='//libtl.com/sdk.js' data-zone='10172138' data-sdk='show_10172138'></script>
+</head>
+<body>
+  <header>💸 Cash Rain - টাকা আয়ের বট 💸</header>
+  <div class="profile">
+    <img src="https://i.ibb.co/3S8KZrN/profile.png" alt="Profile" />
+    <h2 id="username">লোড হচ্ছে...</h2>
+    <div class="balance">ব্যালেন্স: 50.00 TAKA 💰</div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>Ad</h3>
+      <p>দৈনিক বিজ্ঞাপন</p>
+      <b>0/10</b>
+    </div>
+    <div class="card">
+      <h3>👥</h3>
+      <p>মোট রেফার</p>
+      <b>0</b>
+    </div>
+  </div>
+  <footer class="navbar">
+    <a href="#">🏠 হোম</a>
+    <a href="#">🎧 সাপোর্ট</a>
+    <a href="#">📊 চার্ট (ID: 8318387864)</a>
+    <a href="#">💼 উইথড্র</a>
+  </footer>
+
+  <script>
+    // Telegram Mini App থেকে ইউজারের নাম দেখানো
+    if (window.Telegram && Telegram.WebApp) {
+      const user = Telegram.WebApp.initDataUnsafe.user;
+      if (user && user.first_name) {
+        document.getElementById("username").textContent = user.first_name + " ✅";
+      } else {
+        document.getElementById("username").textContent = "Guest User";
+      }
+    } else {
+      document.getElementById("username").textContent = "Guest User";
+    }
+  </script>
+</body>
+</html>
